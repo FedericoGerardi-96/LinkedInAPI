@@ -60,17 +60,17 @@ exports.getLinkedEmail = async (req, res, next) => {
 
 exports.PostLinked = async (req, res, next) => {
   const body = {
-    author: "urn:li:person:OZrAR5PyeV",
-    lifecycleState: "PUBLISHED",
-    specificContent: {
+    "author": "urn:li:person:OZrAR5PyeV",
+    "lifecycleState": "PUBLISHED",
+    "specificContent": {
       "com.linkedin.ugc.ShareContent": {
-        shareCommentary: {
-          text: "Hello World! This is my first Share on LinkedIn!",
+        "shareCommentary": {
+          "text": "Hello World! This is my first Share on LinkedIn!",
         },
-        shareMediaCategory: "NONE",
+        "shareMediaCategory": "NONE",
       },
     },
-    visibility: {
+    "visibility": {
       "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC",
     },
   };
