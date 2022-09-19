@@ -1,0 +1,11 @@
+@import "NavBar.css";
+@import "Home.css";
+@import "Card.css";
+@import "Login.css";
+@import "Footer.css";
+
+.App {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}

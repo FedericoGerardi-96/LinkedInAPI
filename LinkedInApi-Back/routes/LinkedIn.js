@@ -8,9 +8,9 @@ const {
   PostLinked,
 } = require("../controller/LinkedIn");
 
-ruta.route("/").get(getLinkedInUser);
-ruta.route("/img").get(getLinkedInImage);
-ruta.route("/email").get(getLinkedEmail);
-ruta.route("/").post(PostLinked);
+ruta.route("/").post(getLinkedInUser);
+ruta.route("/img").post(getLinkedInImage);
+ruta.route("/email").post(getLinkedEmail);
+ruta.route("/post").post(PostLinked);
 
 module.exports = ruta;

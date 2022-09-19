@@ -8,11 +8,15 @@ dotenv.config({path: './config/config.env'});
 
 // Exporto las rutas donde llamara al controler
 const LinkedIn = require('./routes/LinkedIn');
+const login = require('./routes/auth/login');
 
 const app = express();
+
+app.use(express.json());
 app.use(cors());
 
 app.use('/api/LinkedIn',LinkedIn);
+app.use('/api/login',login);
 
 app.use(errorHandler);
 

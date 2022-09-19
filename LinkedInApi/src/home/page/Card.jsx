@@ -1,16 +1,6 @@
 import React, { useState } from "react";
-import "../../style/Card.css";
-import axios from "axios";
 
-export const Card = ({ UserData, img, email }) => {
-    const [post, setpost] = useState({})
-    
-  const postLinkedIn = async () => {
-    const dataText = { message: "Hola"}
-    const url = `http://localhost:5000/api/LinkedIn`;
-    const data = await axios.post(url,dataText);
-    console.log(data);
-  };
+export const Card = ({ UserData }) => {
   return (
     <div className="card">
       <div className="card-border-top"></div>
@@ -20,14 +10,13 @@ export const Card = ({ UserData, img, email }) => {
           width="70"
           height="80"
           className="img-fluid"
-          src={img}
+          src={UserData.photoURL}
         ></img>
       </div>
       <span>
-        {UserData.localizedFirstName} {UserData.localizedLastName}
+        {UserData.name} {UserData.surname}
       </span>
-      <p className="job"> {email}</p>
-      <button className="mb-3" onClick={postLinkedIn}> Post In LinkedIn</button>
+      <p className="job"> {UserData.email}</p>
     </div>
   );
 };
