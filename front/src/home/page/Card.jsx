@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 export const Card = ({ UserData }) => {
+  console.log(UserData)
   return (
     <div className="card">
       <div className="card-border-top"></div>
@@ -11,12 +12,13 @@ export const Card = ({ UserData }) => {
           height="80"
           className="img-fluid"
           src={UserData.photoURL}
-        ></img>
+          alt="foto de perfil del usuario"
+        />
       </div>
       <span>
         {UserData.name} {UserData.surname}
       </span>
       <p className="job"> {UserData.email}</p>
     </div>
-  );
-};
+  )
+}
