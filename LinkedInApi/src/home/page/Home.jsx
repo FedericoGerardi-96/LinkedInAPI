@@ -23,10 +23,10 @@ export const Home = () => {
 
   useEffect(() => {
     setcode(getParameterByName("code"));
-    const tokenLocalStorage = localStorage.getItem("token");
-    if (tokenLocalStorage === "null") {
+    if (localStorage.getItem("token") === "null") {
       setTimeout(function () {
-        if (tokenLocalStorage === "null") {
+        if (localStorage.getItem("token") === "null") {
+          debugger
           setUserDates(null);
           setToken(null);
           navigate("/login", {
